@@ -6,7 +6,7 @@
 	<link rel='stylesheet' href='css/bootstrap.min.css'>
 </head>
 <body>
-	<section class='centainer-fluid'>
+	<section class='container-fluid'>
 		<section style='text-align:center;' class='jumbotron'>
 			<h1> Bootstrap Example </h1>
 			<?php
