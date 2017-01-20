@@ -49,7 +49,11 @@ After that, you create a new PDO object with the config details
 		require "config.php";
 		include "Pagination.class.php";
 		//initialize PDO connection and save object to $db
-		$db=new PDO(DSN,USER,PASS);
+		try{
+			$db=new PDO(DSN,USER,PASS);
+		}catch(PDOException $e){
+			echo "could not connect because of " .$e ;
+		}
 		//pass the pdo object,the number of listings per page, and the table name to the class. 
 		$paginate = new Pagination($db,5,"customers");
 		//call the paginate methods
