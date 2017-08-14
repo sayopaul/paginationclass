@@ -1,7 +1,7 @@
 <p align="center">
 <img align="center" src="pag.png" width="100%" alt="pagination sample"/>
 </p>
-# Simple Pagination CLass
+# Simple Pagination Class
 
 
 This is a simple class that implements pagination when connected to a mysql databse via PDO.
@@ -21,7 +21,7 @@ It is really easy to set up. No hassle or stress.
  To work properly, the class needs:
 
 * PHP 5 and above, (tested on PHP 7 but should work flawlessly on PHP 5)
-* Web server with PHP and MYSql installed
+* Web server with PHP and mySQL installed
 
 
 
