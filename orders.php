@@ -1,7 +1,7 @@
 <?php
 	
 	include_once "../models/Order_table.class.php";
-	require "../"
+	require "../";
 
 	$stats = new Order($db);
 	$all = $stats->getAllOrders();

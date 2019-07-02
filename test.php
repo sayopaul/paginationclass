@@ -11,7 +11,7 @@
 			<h1> Bootstrap Example </h1>
 			<?php
 				error_reporting(E_ALL ^ E_NOTICE);
-				ini_set("display_errords",1);
+				ini_set("display_errors",1);
 				//!important ---- require the config file and the Pagination class
 				require "config.php";
 				include "Pagination.class.php";
