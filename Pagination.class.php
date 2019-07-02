@@ -52,13 +52,13 @@ class Pagination{
 		$navBar.= (isset($_GET['offset']) && $_GET['offset'] > 0) ? " <li><a href='".$_SERVER['PHP_SELF']. "?offset=". $prevBtn ."&amp;page=". ($currentPage - 1) ."'> << </a> </li>" : "";
 		for($i= $currentPage; $i<ceil( ($currentPage + $this->limitPerPage) + 1);  $i++){
 			//print out the nav bar
-				$current= (($i-1) * $this->limitPerPage);
-				//style the current page. You can edit it to whatever you want
-				$style = ($current == $offset)? "color:white; font-weight:bold; font-style:italic; background-color:#23527c" :"";
-				//try to do the three little dots thing
-				if ($i <= ceil($num/$this->limitPerPage)) {
-					$navBar.= "<li ><a style='$style' href='". $_SERVER['PHP_SELF'] . "?offset=". (($i-1) * $this->limitPerPage) ."&amp;page=$i". "'>" . $i ."</a>" ."&nbsp;</li>";
-				}
+			$current= (($i-1) * $this->limitPerPage);
+			//style the current page. You can edit it to whatever you want
+			$style = ($current == $offset)? "color:white; font-weight:bold; font-style:italic; background-color:#23527c" :"";
+			//try to do the three little dots thing
+			if ($i <= ceil($num/$this->limitPerPage)) {
+				$navBar.= "<li ><a style='$style' href='". $_SERVER['PHP_SELF'] . "?offset=". (($i-1) * $this->limitPerPage) ."&amp;page=$i". "'>" . $i ."</a>" ."&nbsp;</li>";
+			}
 		}
 		//sets the offset. If there is an offset in the url, it is added to the limit per page else, the value is the limit per page.
 		$nextBtn=(isset($_GET['offset'])) ? $_GET['offset'] + $this->limitPerPage : $this->limitPerPage;
